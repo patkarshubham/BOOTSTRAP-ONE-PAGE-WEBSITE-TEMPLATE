@@ -1,0 +1,249 @@
+<!doctype html>
+                        <html>
+                            <head>
+                                <meta charset='utf-8'>
+                                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                <title>Snippet - GoSNippets</title>
+                                <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet'>
+                                <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+                                <style> body {
+     padding-top: 50px;
+ }
+
+ ul {
+     list-style-type: none;
+ }
+
+ .team-section {
+     position: relative;
+     padding: 80px 0px 60px;
+ }
+
+ .team-section.style-two .pattern-layer {
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     right: 0px;
+     bottom: 0px;
+     background-position: center center;
+     background-repeat: no-repeat;
+ }
+
+ .team-section .title-box {
+     position: relative;
+     text-align: center;
+ }
+
+ .team-section .title-box h2 {
+     position: relative;
+     color: #222222;
+     font-size: 36px;
+     font-weight: 700;
+     line-height: 1.3em;
+     margin-bottom: 50px;
+ }
+
+ .team-section .title-box h2 span {
+     color: #ff9600;
+ }
+
+ .team-area {
+     position: relative;
+ }
+
+ .team-area .inner-box {
+     position: relative;
+     padding: 40px 70px 28px 0px;
+ }
+
+ .team-area .inner-box:before {
+     position: absolute;
+     content: '';
+     right: 0px;
+     top: 0px;
+     left: 70px;
+     bottom: 0px;
+     border-radius: 10px;
+     background-color: #f5f5f5;
+     -webkit-transition: all 600ms ease;
+     -moz-transition: all 600ms ease;
+     -ms-transition: all 600ms ease;
+     -o-transition: all 600ms ease;
+     transition: all 600ms ease;
+ }
+
+ .team-area .inner-box::after {
+     position: absolute;
+     content: '';
+     top: 0px;
+     left: 70px;
+     bottom: 0px;
+     width: 0%;
+     border-radius: 10px;
+     -webkit-transition: all 600ms ease;
+     -moz-transition: all 600ms ease;
+     -ms-transition: all 600ms ease;
+     -o-transition: all 600ms ease;
+     transition: all 600ms ease;
+     background-image: -ms-linear-gradient(top, #FFEB3C 0%, #ff9600 100%);
+     background-image: -moz-linear-gradient(top, #FFEB3C 0%, #ff9600 100%);
+     background-image: -o-linear-gradient(top, #FFEB3C 0%, #ff9600 100%);
+     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFEB3C), color-stop(100, #ff9600));
+     background-image: -webkit-linear-gradient(top, #FFEB3C 0%, #ff9600 100%);
+     background-image: linear-gradient(to bottom, #FFEB3C 0%, #ff9600 100%);
+ }
+
+ .team-area .inner-box:hover::after {
+     width: 81%;
+ }
+
+ .team-area .inner-box .social-icons {
+     position: absolute;
+     right: 25px;
+     top: 100px;
+     z-index: 1;
+ }
+
+ .team-area .inner-box .social-icons li {
+     position: relative;
+     margin-bottom: 20px;
+ }
+
+ .team-area .inner-box .social-icons li a {
+     position: relative;
+     color: #e400e1;
+     font-size: 18px;
+     -webkit-transition: all 0.4s;
+     -moz-transition: all 0.4s;
+     -o-transition: all 0.4s;
+     transition: all 0.4s;
+ }
+
+ .team-area .inner-box:hover .lower-content h3 a,
+ .team-area .inner-box:hover .social-icons li a,
+ .team-area .inner-box:hover .lower-content .designation {
+     color: #ffffff;
+ }
+
+ .team-area .inner-box .image {
+     position: relative;
+     z-index: 1;
+     border-radius: 10px;
+     background-color: #ffffff;
+     box-shadow: inset 0px 0px 35px rgba(0, 0, 0, 0.20);
+ }
+
+ .team-area .inner-box .image img {
+     position: relative;
+     width: 100%;
+     display: block;
+     padding: 15px;
+     border-radius: 25px;
+ }
+
+ .team-area .inner-box .lower-content {
+     position: relative;
+     text-align: left;
+     z-index: 1;
+     padding: 30px 15px 0px 110px;
+ }
+
+ .team-area .inner-box .lower-content h3 {
+     position: relative;
+     color: #2200bd;
+     font-size: 18px;
+     font-weight: 700;
+     line-height: 1.3em;
+ }
+
+ .team-area .inner-box .lower-content h3 a {
+     position: relative;
+     color: #2200bd;
+     -webkit-transition: all 0.4s;
+     -moz-transition: all 0.4s;
+     -o-transition: all 0.4s;
+     transition: all 0.4s;
+ }
+
+ .team-area .inner-box .lower-content .designation {
+     position: relative;
+     margin-top: 5px;
+     color: #777777;
+     font-size: 14px;
+ }
+
+ .team-area.style-two .inner-box .lower-content h3 a,
+ .team-area.style-two .inner-box .social-icons li a {
+     color: #ff9600;
+ }
+
+ .team-area.style-two .inner-box:hover .lower-content h3 a,
+ .team-area.style-two .inner-box:hover .social-icons li a {
+     color: #ffffff;
+ }</style>
+                                <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+                                <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+                                <script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js'></script>
+                            </head>
+                            <body oncontextmenu='return false' class='snippet-body'>
+                            <div class="container-fluid">
+    <div class="row clearfix">
+        <!-- Team Block -->
+        <div class="team-area col-lg-4 col-md-6 col-sm-12">
+            <div class="inner-box">
+                <ul class="social-icons">
+                    <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                    <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                </ul>
+                <div class="image">
+                    <a href="#"><img src="https://i.imgur.com/TFerQbb.jpg" alt=""></a>
+                </div>
+                <div class="lower-content">
+                    <h3><a href="#">Vishvjeet Patel</a></h3>
+                    <div class="designation">Former Developer</div>
+                </div>
+            </div>
+        </div>
+        <!-- Team Block -->
+        <div class="team-area col-lg-4 col-md-6 col-sm-12">
+            <div class="inner-box">
+                <ul class="social-icons">
+                    <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                    <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                </ul>
+                <div class="image">
+                    <a href="#"><img src="https://i.imgur.com/irVhAbb.jpg" alt=""></a>
+                </div>
+                <div class="lower-content">
+                    <h3><a href="#">Anchala </a></h3>
+                    <div class="designation">Ul / Ux Designer</div>
+                </div>
+            </div>
+        </div>
+        <!-- Team Block -->
+        <div class="team-area col-lg-4 col-md-6 col-sm-12">
+            <div class="inner-box">
+                <ul class="social-icons">
+                    <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
+                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                    <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                </ul>
+                <div class="image">
+                    <a href="#"><img src="https://i.imgur.com/o3JYN5N.jpg" alt=""></a>
+                </div>
+                <div class="lower-content">
+                    <h3><a href="#">Miss Lee</a></h3>
+                    <div class="designation">Former Developer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                            <script type='text/javascript'></script>
+                            </body>
+                        </html>

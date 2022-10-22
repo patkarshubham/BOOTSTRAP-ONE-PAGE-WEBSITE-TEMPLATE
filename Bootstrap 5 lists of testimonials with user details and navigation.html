@@ -1,0 +1,231 @@
+<!doctype html>
+                        <html>
+                            <head>
+                                <meta charset='utf-8'>
+                                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                <title>Snippet - GoSNippets</title>
+                                <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+                                <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
+                                <style> @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif
+ }
+
+ body {
+     background-color: #eee
+ }
+
+ .wrapper {
+     padding: 0;
+     max-width: 400px;
+     margin: 20px auto;
+     border: 1px solid #ddd;
+     border-radius: 15px
+ }
+
+ .rounded-t {
+     border-top-left-radius: 15px;
+     border-top-right-radius: 15px
+ }
+
+ .alert-dismissible {
+     border-radius: 15px
+ }
+
+ img {
+     object-fit: cover;
+     width: 60px;
+     height: 60px;
+     border-radius: 50%
+ }
+
+ h6 {
+     font-weight: 800
+ }
+
+ .form-control:focus {
+     box-shadow: none
+ }
+
+ .alert-dismissible #head .close {
+     padding: 0;
+     margin: 0.4rem 0.5rem;
+     padding: 0.1rem 0.3rem;
+     color: #fff;
+     font-weight: bolder;
+     text-shadow: none;
+     opacity: 1;
+     font-size: 0.9rem;
+     outline: none;
+     border: 2px solid #fff;
+     border-radius: 4px
+ }
+
+ .nav {
+     display: flex;
+     justify-items: stretch;
+     margin-top: 10px
+ }
+
+ .nav-tabs {
+     border-bottom: 1px solid #ddd
+ }
+
+ .nav.nav-tabs .nav-link {
+     padding: 0.3rem 0.3rem;
+     color: #777;
+     border: none;
+     width: fit-content;
+     font-size: 0.9rem;
+     text-align: center
+ }
+
+ .nav.nav-tabs .nav-link.active span {
+     color: #167cdb
+ }
+
+ .nav.nav-tabs .nav-link:focus {
+     border: none;
+     border-bottom: 3px solid #167cdb;
+     color: #333
+ }
+
+ .nav.nav-tabs .nav-link.disabled {
+     background-color: #eee
+ }
+
+ .nav.nav-tabs .nav-link.disabled:focus {
+     border: none;
+     color: #777
+ }
+
+ .nav.nav-tabs .nav-link:focus span {
+     color: #167cdb
+ }
+
+ .nav.nav-tabs .nav-link:not(:focus) {
+     border-bottom: none
+ }
+
+ .nav.nav-tabs .nav-link.active {
+     border: none;
+     border-bottom: 3px solid #167cdb;
+     color: #333
+ }
+
+ .testimonial {
+     border: 1px solid #ddd;
+     margin: 10px 0px;
+     cursor: pointer
+ }
+
+ #testimonials .testimonial.alert-dismissible .close {
+     text-shadow: none;
+     color: rgb(204, 0, 0);
+     opacity: 0;
+     outline: none
+ }
+
+ #testimonials .testimonial:hover.alert-dismissible .close {
+     opacity: 1
+ }
+
+ .btn.btn-primary {
+     border-radius: 25px;
+     font-size: 0.85rem;
+     padding: 0.3rem 0.8rem
+ }
+
+ .testimonial .btn {
+     color: #167cdb;
+     border: 1px solid #167cdb;
+     font-size: 0.9rem;
+     padding: 0.2rem 0.8rem
+ }
+
+ .testimonial .btn:hover {
+     color: #fff;
+     background-color: #167cdb
+ }
+
+ .text-p {
+     font-size: 0.9rem;
+     padding-top: 4px
+ }
+
+ ::-webkit-scrollbar {
+     width: 8px
+ }
+
+ ::-webkit-scrollbar-thumb {
+     background-color: #167cdb;
+     border-radius: 4px
+ }</style>
+                                <script type='text/javascript' src=''></script>
+                                <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+                                <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+                            </head>
+                            <body oncontextmenu='return false' class='snippet-body'>
+                            <div class="wrapper bg-white alert alert-dismissible fade show" role="alert">
+    <div class="d-flex align-items-center bg-primary rounded-t py-1 px-2" id="head">
+        <div class="fas fa-sms text-white"></div>
+        <div class="text-white px-1">Testimonials</div>
+        <div> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>
+    </div>
+    <div class="newer bg-white px-3">
+        <div id="navigations">
+            <ul class="nav nav-tabs">
+                <li class="nav-item"> <a class="nav-link active" href="#testimonials"> <span class="fas fa-list-ul pr-1"></span> List of Testimonials </a> </li>
+                <li class="nav-item"> <a class="nav-link disabled" href="#settings"> <span class="fas fa-cog pr-1"></span> Settings </a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#templates"> <span class="fab fa-rev pr-1"></span> Templates </a> </li>
+            </ul>
+        </div>
+        <div id="testimonials">
+            <div class="btn btn-primary my-2" type="button" data-toggle="collapse" data-target="#new" aria-expanded="false" aria-controls="new"> <span class="fas fa-plus"></span> New Testimonial </div>
+            <div id="new" class="collapse my-1">
+                <div id="add-testimonial">
+                    <form class="border p-2 rounded">
+                        <div class="form-group">
+                            <h6>Add Testimonial</h6> <input type="text" required class="form-control" placeholder="Name"> <textarea name="testi" id="testi" cols="10" rows="5" class="form-control my-2" placeholder="Add Testimonial"></textarea> <input type="file">
+                        </div>
+                        <div class="btn btn-primary rounded my-1">Add </div>
+                    </form>
+                </div>
+            </div>
+            <div class="testimonial p-3 d-flex justify-newer-between align-items-start alert alert-dismissible fade show rounded-0" role="alert">
+                <div class=" d-flex flex-column justify-newer-center align-newer-around"> <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZmFjZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+                    <div class="btn mt-3">Edit</div>
+                </div>
+                <div class="mx-3"> <strong class="name mb-2">Jhon Doe</strong>
+                    <p class="text-p"> Wow Microweber is really great website builder. I love it!</p>
+                </div>
+                <div class="closer"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>
+            </div>
+            <div class="testimonial p-3 d-flex justify-newer-between align-items-start alert alert-dismissible fade show rounded-0" role="alert">
+                <div class=" d-flex flex-column justify-newer-center align-newer-around"> <img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzF8fHdvbWVuJTIwZmFjZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+                    <div class="btn mt-3">Edit</div>
+                </div>
+                <div class="mx-3"> <strong class="name mb-2">Jenne Armstrong</strong>
+                    <p class="text-p"> Wow Microweber is really great website builder. I love it! I was able to create a website my-self in very easy way. I effeminately recommend all it to all friends and colleagues and to us it make their own wesite or online store for free. I like that it's also present in Laravel and Bootstrap. </p>
+                </div>
+                <div class="closer"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>
+            </div>
+            <div class="testimonial p-3 d-flex justify-newer-between align-items-start alert alert-dismissible fade show rounded-0" role="alert">
+                <div class=" d-flex flex-column justify-newer-center align-newer-around"> <img src="https://images.unsplash.com/photo-1573497019707-1c04de26e58c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzZ8fHdvbWVuJTIwZmFjZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+                    <div class="btn mt-3">Edit</div>
+                </div>
+                <div class="mx-3"> <strong class="name mb-2">Hermoine Granger</strong>
+                    <p class="text-p"> Wow Microweber is really great website builder. I love it! I was able to create a website my-self in very easy way. I effeminately recommend all it to all friends and colleagues. </p>
+                </div>
+                <div class="closer"> <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">&times;</span> </button> </div>
+            </div>
+        </div>
+    </div>
+</div>
+                            <script type='text/javascript'></script>
+                            </body>
+                        </html>

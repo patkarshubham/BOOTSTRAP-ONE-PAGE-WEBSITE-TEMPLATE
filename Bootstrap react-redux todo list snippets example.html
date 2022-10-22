@@ -1,0 +1,295 @@
+<!doctype html>
+                        <html>
+                            <head>
+                                <meta charset='utf-8'>
+                                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                <title>Snippet - GoSNippets</title>
+                                <link href='' rel='stylesheet'>
+                                <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+                                <style>@import url(https://fonts.googleapis.com/css?family=Quicksand:300,400,700);
+
+body {
+    font-family: 'quicksand';
+    font-weight: 300;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: transparent;
+    background-image: linear-gradient(100deg, #f26798 0%, #3023ae 100%);
+}
+
+.app-wrapper {
+    background: -webkit-linear-gradient(315deg, #fedeb5 0%, #416074 100%);
+    background: linear-gradient(135deg, #fedeb5 0%, #416074 100%);
+    width: 360px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 10px 10px 10px -8px rgba(0, 0, 0, 0.35);
+    margin-top: 10%;
+}
+
+.app-wrapper button:hover {
+    cursor: pointer;
+}
+
+.app-wrapper button:focus {
+    outline: none;
+}
+
+.todos-wrapper {
+    overflow: scroll;
+    height: 100%;
+}
+
+.form-wrapper {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    max-width: 360px;
+    bottom: 0;
+}
+
+.form-wrapper input {
+    font-family: 'quicksand';
+    position: absolute;
+    border: 0 none;
+    width: 280px;
+    height: 58px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.form-wrapper input:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.form-wrapper button {
+    color: white;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 0;
+    padding: 0;
+    width: 64px;
+    height: 100%;
+    right: 0;
+}
+
+.form-wrapper button i {
+    font-size: 40px;
+    padding: 0 none;
+}
+
+.form-wrapper form {
+    height: 60px;
+}
+
+.filters-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    height: 60px;
+    width: 100%;
+    max-width: 360px;
+}
+
+.filters-wrapper button {
+    color: white;
+    font-family: 'quicksand';
+    font-weight: 800;
+    width: 100%;
+    border: 0 none;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding: 10px;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.filters-wrapper button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.filters-wrapper button:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.todos-wrapper {
+    max-height: 480px;
+    overflow: auto;
+}
+
+.todos-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+.todos-list li {
+    height: 60px;
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+.todos-list button {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 10px;
+    border: 0 none;
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
+}
+
+.todos-list button i {
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: color .2s;
+    transition: color .2s;
+}
+
+.todos-list button:hover {
+    cursor: pointer;
+}
+
+.todos-list button:hover i {
+    color: white;
+}
+
+.todos-list .toggle-todo {
+    margin-left: auto;
+}
+
+.todos-list .remove-todo {
+    margin-right: auto;
+}
+
+.todos-list .completed-todo {
+    background-color: white;
+}
+
+.todos-list .completed-todo i {
+    color: green;
+}
+
+.todos-list .completed-todo:hover i {
+    color: green;
+}
+
+.todo-group-enter {
+    opacity: 0;
+    max-height: 0;
+    -webkit-transform: translateX(-120%);
+    transform: translateX(-120%);
+}
+
+.todo-group-enter.todo-group-enter-active {
+    opacity: 1;
+    max-height: 60px;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: all 200ms;
+    transition: all 200ms;
+}
+
+.todo-group-leave {
+    opacity: 1;
+    max-height: 60px;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.todo-group-leave.todo-group-leave-active {
+    opacity: 0;
+    -webkit-transform: translateX(-120%);
+    transform: translateX(-120%);
+    max-height: 0;
+    -webkit-transition: all 200ms;
+    transition: all 200ms;
+}</style>
+                                <script type='text/javascript' src=''></script>
+                                <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+                                <script type='text/javascript' src=''></script>
+                            </head>
+                            <body oncontextmenu='return false' class='snippet-body'>
+                            <div id="root"></div>
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
+<script src='https://fb.me/react-with-addons-15.1.0.min.js'></script>
+<script src='https://fb.me/react-dom-15.1.0.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/redux/3.0.4/redux.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react-redux/4.0.0/react-redux.js'></script>
+                            <script type='text/javascript'>"use strict";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _React = React;
+var Component = _React.Component;
+var _ReactRedux = ReactRedux;
+var connect = _ReactRedux.connect;
+var Provider = _ReactRedux.Provider;
+var _Redux = Redux;
+var combineReducers = _Redux.combineReducers;
+var createStore = _Redux.createStore;
+
+var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+
+//action types
+var ADD_TODO = "ADD_TODO";
+var REMOVE_TODO = "REMOVE_TODO";
+var TOGGLE_TODO = "TOGGLE_TODO";
+var SET_FILTER = "SET_FILTER";
+
+//seed todos
+var exampleTodos = [{
+text: "react",
+completed: false
+}, {
+text: "redux",
+completed: true
+}, {
+text: "repeat",
+completed: false
+}];
+
+//reducers
+var todos = function todos() {
+var _todos = arguments.length <= 0 || arguments[0]===undefined ? exampleTodos : arguments[0]; var action=arguments[1]; switch (action.type) { case ADD_TODO: return [].concat(_todos, [{ text: action.text, completed: false }]); case REMOVE_TODO: return [].concat(_todos.slice(0, action.i), _todos.slice(action.i + 1)); case TOGGLE_TODO: return _todos.map(function (t, i) { var c=t.completed; if (i===action.i) { return Object.assign({}, t, { completed: !c }); }return t; }); default: return _todos; } }; var filter=function filter() { var _filter=arguments.length <=0 || arguments[0]===undefined ? "SHOW_ALL" : arguments[0]; var action=arguments[1]; switch (action.type) { case SET_FILTER: return action.filterType; default: return _filter; } }; var appReducer=combineReducers({ todos: todos, filter: filter }); //store var store=createStore(appReducer); //action creators var addTodo=function addTodo(text, i) { return { text: text, type: ADD_TODO }; }; var removeTodo=function removeTodo(i) { return { i: i, type: REMOVE_TODO }; }; var toggleTodo=function toggleTodo(i) { return { i: i, type: TOGGLE_TODO }; }; var setFilter=function setFilter(filterType) { return { filterType: filterType, type: SET_FILTER }; }; //presentational components var Todo=function Todo(_ref) { var text=_ref.text; var completed=_ref.completed; var index=_ref.index; return React.createElement( "li" , null, React.createElement( "button" , { className: "remove-todo" , onClick: function onClick() { return store.dispatch(removeTodo(index)); } }, React.createElement("i", { className: "fa fa-times" , "aria-hidden" : "true" }) ), React.createElement( "span" , null, text ), React.createElement( "button" , { className: completed ? "toggle-todo completed-todo" : "toggle-todo" , onClick: function onClick() { return store.dispatch(toggleTodo(index)); } }, React.createElement("i", { className: "fa fa-check" , "aria-hidden" : "true" }) ) ); }; var TodoList=function TodoList(_ref2) { var todos=_ref2.todos; var filterType=_ref2.filterType; return React.createElement( "div" , { className: "todos-wrapper" }, React.createElement( ReactCSSTransitionGroup, { className: "todos-list" , transitionName: "todo-group" , transitionEnterTimeout: 200, transitionLeaveTimeout: 200, component: "ul" }, todos.filter(function (t) { if (filterType==="SHOW_COMPLETED" ) { return t.completed===true; } else if (filterType==="SHOW_UNFINISHED" ) { return t.completed===false; }return t; }).reverse().map(function (t) { return React.createElement(Todo, { text: t.text, completed: t.completed, index: todos.indexOf(t), key: todos.indexOf(t) }); }) ) ); }; var mapTodoListStateToProps=function mapTodoListStateToProps(state) { return { todos: state.todos, filterType: state.filter }; }; var ConnectedTodoList=connect(mapTodoListStateToProps)(TodoList); var Filters=function Filters(_ref3) { var dispatch=_ref3.dispatch; return React.createElement( "div" , { className: "filters-wrapper" }, React.createElement( "button" , { onClick: function onClick() { return dispatch(setFilter("SHOW_ALL")); } }, " " , React.createElement( "span" , null, "ALL" ) ), React.createElement( "button" , { onClick: function onClick() { return dispatch(setFilter("SHOW_COMPLETED")); } }, " " , React.createElement( "span" , null, "FINISHED" ) ), React.createElement( "button" , { onClick: function onClick() { return dispatch(setFilter("SHOW_UNFINISHED")); } }, " " , React.createElement( "span" , null, "WORKING" ) ) ); }; var mapFilterStateToProps=function mapFilterStateToProps(state) { return { filter: state.filter }; }; var ConnectedFilters=connect(mapFilterStateToProps)(Filters); var AddTodo=function AddTodo(_ref4) { var dispatch=_ref4.dispatch; var input=undefined; return React.createElement( "div" , { className: "form-wrapper" }, React.createElement( "form" , { onSubmit: function onSubmit(e) { e.preventDefault(); if (!input.value.trim()) { return; } dispatch(addTodo(input.value)); input.value='' ; } }, React.createElement("input", { ref: function ref(node) { input=node; } }), React.createElement( "button" , { type: "submit" }, React.createElement("i", { className: "fa fa-plus-circle" , "aria-hidden" : "true" }) ) ) ); }; var ConnectedAddTodo=connect()(AddTodo); var TodosApp=function TodosApp() { return React.createElement( "div" , { className: "app-wrapper" }, React.createElement(ConnectedFilters, null), React.createElement(ConnectedTodoList, null), React.createElement(ConnectedAddTodo, null) ); }; // index.js var App=function (_Component) { _inherits(App, _Component); function App() { _classCallCheck(this, App); return _possibleConstructorReturn(this, _Component.apply(this, arguments)); } App.prototype.render=function render() { return React.createElement(TodosApp, null); }; return App; }(Component); ; ReactDOM.render(React.createElement( Provider, { store: store }, React.createElement(App, null) ), document.getElementById("root")); //# sourceURL=pen.js</script>
+                            </body>
+                        </html>
